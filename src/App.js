@@ -4,7 +4,9 @@ import ActivityCard from '../components/ActivityCard';
 
 function App() {
   return (
-    <ActivityCard />
+    <div className='App'>
+      <ActivityCard />
+    </div>
   );
 }
 
