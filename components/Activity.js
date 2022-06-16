@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Activity = (props) => {
+    
 
     return(
         <div className="activity">

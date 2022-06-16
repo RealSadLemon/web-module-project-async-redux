@@ -1,11 +1,20 @@
+import axios from 'axios';
 export const GET_ACTIVITY_OBJECT = 'GET_ACTIVITY_OBJECT';
 export const GET_ACTIVITY_OF_TYPE = 'GET_ACTIVITY_OF_TYPE';
 export const GET_ACTIVITY_OF_PRICE = 'GET_ACTIVITY_OF_PRICE';
 export const GET_ACTIVITY_OF_PARTICIPANTS = 'GET_ACTIVITY_OF_PARTICIPANTS';
 
-export const getActivityObject = () => {
-    return {
-        type: GET_ACTIVITY_OBJECT
+export function getActivityObject() {
+    return (dispatch) => {
+        axios.get('https://www.boredapi.com/api/activity')
+            .then(res => {
+                const activityObj = res.data
+                dispatch({type: GET_ACTIVITY_OBJECT, payload: activityObj})
+            })
+            .catch(err => {
+                console.log(err);
+                debugger
+            })
     }
 }
 

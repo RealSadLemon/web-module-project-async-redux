@@ -1,7 +1,7 @@
 import { GET_ACTIVITY_OBJECT, GET_ACTIVITY_OF_TYPE, GET_ACTIVITY_OF_PRICE, GET_ACTIVITY_OF_PARTICIPANTS } from "../actions";
 
 const loadingState = {
-    loading: null
+    loaded: false
 }
 
 const reducer = (state = loadingState, action) => {
@@ -9,25 +9,25 @@ const reducer = (state = loadingState, action) => {
         case GET_ACTIVITY_OBJECT:
             return {
                 ...state,
-                loading: false,
+                loaded: true,
                 activityObj: action.payload
             };
         case GET_ACTIVITY_OF_TYPE:
             return {
                 ...state,
-                loading: false,
+                loaded: false,
                 activityObj: action.payload
             };
         case GET_ACTIVITY_OF_PRICE:
             return {
                 ...state,
-                loading: false,
+                loaded: false,
                 activityObj: action.payload
             };
         case GET_ACTIVITY_OF_PARTICIPANTS:
             return {
                 ...state,
-                loading: false,
+                loaded: false,
                 activityObj: action.payload
             };
         default:
