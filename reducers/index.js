@@ -7,7 +7,29 @@ const loadingState = {
 const reducer = (state = loadingState, action) => {
     switch(action.type) {
         case GET_ACTIVITY_OBJECT:
-            return state;
+            return {
+                ...state,
+                loading: false,
+                activityObj: action.payload
+            };
+        case GET_ACTIVITY_OF_TYPE:
+            return {
+                ...state,
+                loading: false,
+                activityObj: action.payload
+            };
+        case GET_ACTIVITY_OF_PRICE:
+            return {
+                ...state,
+                loading: false,
+                activityObj: action.payload
+            };
+        case GET_ACTIVITY_OF_PARTICIPANTS:
+            return {
+                ...state,
+                loading: false,
+                activityObj: action.payload
+            };
         default:
             return state;
     }
