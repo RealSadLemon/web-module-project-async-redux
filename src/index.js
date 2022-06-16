@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { createStoreHook, Provider } from 'react-redux';
 import App from './App';
 import './index.css';
 
