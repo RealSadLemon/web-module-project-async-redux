@@ -33,10 +33,10 @@ export const getActivityOfType = (type) => {
 }
 
 export const getActivityOfPrice = (price) => {
-    const actualPrice = [0.0, 1.0];
-    if(price === 'Free') actualPrice = [0.0, 0.0]
-    if(price === 'Cheap') actualPrice = [0.1, 0.4]
-    if(price === 'Not-So-Cheap') actualPrice = [0.5, 1.0]
+    let actualPrice = [0.0, 1.0];
+    if(price === 'Free') actualPrice = [0.0, 0.0];
+    if(price === 'Cheap') actualPrice = [0.1, 0.4];
+    if(price === 'Not-So-Cheap') actualPrice = [0.5, 1.0];
     return (dispatch) => {
         axios.get(`https://www.boredapi.com/api/activity?minprice=${actualPrice[0]}&maxprice=${actualPrice[1]}`)
             .then(res => {

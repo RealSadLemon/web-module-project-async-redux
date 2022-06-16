@@ -43,7 +43,6 @@
 
 .activity-card {
   background-color: cyan;
-  max-width: fit-content;
   border: 2px solid darkblue;
   border-bottom-right-radius: 1.5rem;
   box-shadow: 0rem 0rem 1rem lightblue;
